@@ -20,7 +20,7 @@ body{
     justify-content: flex-start;
     align-items: flex-start;
 
-    width: 60%;
+    width: 70%;
     margin: 80px auto;
     border: 1px solid ;
     padding: 10px;
@@ -42,7 +42,7 @@ input{
     
 }
 button{
-    padding: 10px 100px;
+    padding: 10px 80px;
     border: none;
    color: white;
     font-size: 23px;
