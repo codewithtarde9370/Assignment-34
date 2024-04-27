@@ -20,7 +20,7 @@ body{
     justify-content: flex-start;
     align-items: flex-start;
 
-    width: 80%;
+    width: 60%;
     margin: 80px auto;
     border: 1px solid ;
     padding: 10px;
@@ -31,25 +31,61 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    
 }
 input{
     padding: 10px 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
+    width: 600px;
+    border: none;
+    font-size: 23px;
+   
+    
 }
 button{
-    padding: 10px 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
+    padding: 10px 100px;
+    border: none;
+   color: white;
+    font-size: 23px;
     background-color: rgba(0,160,187,1);
-
+    
 }
 .list-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-start;
-   width: fit-content;
-    padding: 10px;
-    color: white;
+    align-items: center;
+    width:800px;
+    border: none;
+    background-color: bisque;
+    padding: 10px 20px;
+    margin: 10px auto;
+    
+}
+
+.list-container li {
+    list-style: none;
+    width: 700px;
+    font-size: 20px;
+    color:  rgba(0,0,0,1) 100.2%;
+
+}
+img{
+    height: 28px;
+    padding: 5px;
+    cursor: pointer;
+}
+.remove:hover{
+    background-color: #978d8d;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.remove{
+    margin-right: 10px;
+}
+.cuttask{
+    text-decoration: line-through;
+
 }

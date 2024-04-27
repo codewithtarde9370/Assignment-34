@@ -18,26 +18,52 @@
     <div class="container">
         <div class="input">
             <div class="title">
-                <label for="task" class="text-light fs-2 mx-2">Task:</label>
+                <label for="task" class="text-light fs-2 mx-2">Task :</label>
                 <input type="text" id="task" name="task" placeholder="eg.Reading a book" class="mx-2 ">
             </div>
             <div class="btn">
-                <button type="submit" id="add-btn">Add</button>
+                <button type="submit" id="add-btn" onclick="addTask()">Add</button>
             </div>
         </div>
-        <div class="list-container" id="list-cont">
-            <div class="list">
-                <p>Reading a Book </p>
+        
+            <ul  id="list-cont">
 
-            </div>
-            <div class="icons">
-                <img src="./icons/x.png" alt="">
-
-            </div>
-
-        </div>
+        </ul>
 
     </div>
+
+    <script>
+
+        const todoList=[];
+        function addTask(index){
+            const task=document.getElementById("task");
+todoList.push(task.value);
+task.value="";
+renderTodoList();
+
+        }
+
+        function renderTodoList(index){
+const listContainer=document.getElementById("list-cont");
+listContainer.innerHTML="";
+
+for(const todoItem of todoList)
+{   
+    listContainer.innerHTML+=`<div class="list-container"><img src="./icons/empty.png" class="check" id="checkb" onclick="completedTask()"><li id="listtask">${todoItem}</li><img src="./icons/x.png" class="remove"></div>`;
+}
+        }
+    function completedTask(index)
+    {
+        const changeIcon=document.getElementById("checkb");
+        changeIcon.src="./icons/correct.png";
+        
+        const changetask=document.getElementById("listtask");
+        changetask.classList.add("cuttask");
+
+    }
+    
+    
+    </script>
 
     
 </body>
