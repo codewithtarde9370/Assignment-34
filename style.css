@@ -62,7 +62,7 @@ button{
     
 }
 
-.list-container li {
+.list-container .task-item {
     list-style: none;
     width: 700px;
     font-size: 20px;
@@ -85,7 +85,7 @@ img{
 .remove{
     margin-right: 10px;
 }
-.cuttask{
+.completed{
     text-decoration: line-through;
 
 }
