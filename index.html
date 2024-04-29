@@ -36,6 +36,7 @@
             if (task !== "") {
                 todoList.push(task);
                 taskInput.value = "";
+                localStorage.setItem("todoList", JSON.stringify(todoList));
                 renderTodoList();
             }
         }
@@ -52,6 +53,7 @@
                         <img src="./icons/x.png" class="remove" onclick="deleteTask(${i})">
                     </div>`;
                 listContainer.appendChild(listItem);
+                
             }
         }
 
@@ -64,6 +66,7 @@
 
         function deleteTask(index) {
             todoList.splice(index, 1);
+            localStorage.setItem("todoList", JSON.stringify(todoList));
             renderTodoList();
         }
 
