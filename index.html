@@ -28,8 +28,15 @@
     </div>
 
 <script>
-        const todoList = [];
+        let todoList = [];
         const listContainer = document.getElementById("list-cont");
+        const listfromLS= localStorage.getItem("todoList");
+        if (listfromLS) {
+            todoList = JSON.parse(listfromLS);
+            renderTodoList();
+        }
+
+        
 
         function addTask() {
             const taskInput = document.getElementById("task");
