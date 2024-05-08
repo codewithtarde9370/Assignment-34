@@ -66,10 +66,13 @@
         }
 
         function completedTask(index) {
+            let todoListItem = JSON.parse(localStorage.getItem("todoList")) 
             const listItem = listContainer.children[index];
             const checkIcon = listItem.querySelector(".check");
             checkIcon.src = "./icons/correct.png";
             listItem.classList.add("completed");
+            localStorage.setItem("todoList", JSON.stringify(todoListItem));
+
         }
 
         function deleteTask(index) {
